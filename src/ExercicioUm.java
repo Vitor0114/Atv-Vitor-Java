@@ -29,47 +29,197 @@ public class ExercicioUm {
         }
 
         switch (menu) {
-            // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
             case 1:
+                // 1) Crie um programa que calcule a média (`(nota1 + nota2 + nota3 / 3)`)
+
+                double media;
+
+                System.out.print("Digite a primeira nota: ");
+                double nota1 = scanner.nextDouble();
+
+                System.out.print("Digite a segunda nota: ");
+                double nota2 = scanner.nextDouble();
+
+                System.out.print("Digite a terceira nota: ");
+                double nota3 = scanner.nextDouble();
+
                 // media(double notaUm, double notaDois, double notaTres)
+
+                media = media( nota1 , nota2 , nota3 );
+
+                System.out.printf("Media das notas: %.2f", media);
+
                 break;
-            // 2) Crie um programa que calcule a área (`lado1 * lado2`)
+            
             case 2:
+            // 2) Crie um programa que calcule a área (`lado1 * lado2`)
+
+                double area;
+
+                System.out.print("Digite o Valor do primeiro lado: ");
+                double lado1 = scanner.nextDouble();
+
+                System.out.print("Digite o Valor do segundo lado: ");
+                double lado2 = scanner.nextDouble();
+
+                area = area (lado1 , lado2);
+
+                System.out.printf("Area: %.2f", area);
+
+
                 // area(double ladoUm, double ladoDois)
+
                 break;
-            // 3) Crie um programa que calcule o volume (`largura * altura * profundidade`)
+
+           
             case 3:
+                // 3) Crie um programa que calcule o volume (`largura * altura * profundidade`)
+
+                double volume;
+
+                System.out.print("Digite a Largura: ");
+                double largura = scanner.nextDouble();
+
+                System.out.print("Digite a Altura: ");
+                double altura = scanner.nextDouble();
+
+                System.out.print("Digite a Profundidade: ");
+                double profundidade = scanner.nextDouble();
+
+                volume = volume (largura, altura, profundidade);
+
+                System.out.printf("Volume 2.2f", volume);
+
                 // volume(double largura, double altura, double profundidade)
+
                 break;
-            // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
+           
             case 4:
+                // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
+
+                System.out.println("Digite o primeiro Valor: ");
+                double valor1 = scanner.nextDouble();
+
+                System.out.println("Digite o segundo Valor: ");
+                double valor2 = scanner.nextDouble();
+
+                if(valor1 > valor2 * 2){
+                    System.out.printf("\n%.2f é maior que o dobro de %.2f!%n", valor1, valor2);
+                    
+                }else{
+                    System.out.printf("\n%.2f é menor que o dobro de %.2f!%n", valor1, valor2);
+                    
+                }
+
                 // valorMaiorQueDobro(double base, double verificar)
+
                 break;
-            // 5) Crie um programa que calcule _bhaskara_
+            
             case 5:
+                // 5) Crie um programa que calcule _bhaskara_
+
+                
+
+
+
+
                 // bhaskara(int a, int b, int c);
+
                 break;
-            // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
+
             case 6:
+                // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
+
+                double mediaViagem;
+
+                System.out.print("Digite a distancia: ");
+                double distancia = scanner.nextDouble();
+
+                System.out.print("Digite o tempo: ");
+                double tempo = scanner.nextDouble();
+
+                mediaViagem = mediaViagem(distancia , tempo);
+
+                System.out.printf("Media: %.2f", mediaViagem);
+
+
+
                 // mediaViagem(double distancia, double tempo)
+
                 break;
-            // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
+
             case 7:
+                // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
+                
+                double percentualImposto;
+
+                System.out.print("Seu faturamento: ");
+                double faturamento = scanner.nextDouble();
+
+                System.out.print("Seu imposto: ");
+                double qtdImposto = scanner.nextDouble();
+
+                percentualImposto = percentualImposto(faturamento, qtdImposto);
+
+
+                System.out.printf("Percentual de imposto pago: %.2f", percentualImposto);
+
+
                 // percentualImposto(double faturamento, double qtdImposto)
+
                 break;
-            // 8) Crie um programa que teste se um valor é par ou ímpar
+
             case 8:
+                // 8) Crie um programa que teste se um valor é par ou ímpar
+
+                System.out.print("Digite um numero: ");
+                int valor = scanner.nextInt();
+
+                if(valor%2==0){
+                    System.out.printf("%d é Par",valor);
+                }else{
+                    System.out.printf("%d é Impar",valor);
+                }
+
+
+
                 // parOuImpar(int valor)
+
                 break;
-            // 9) Crie um programa que compare dois valores Strings
+            
             case 9:
+                // 9) Crie um programa que compare dois valores Strings
+
+                System.out.println("Digite algo: ");
+                String txt1 = scanner.nextLine();
+
+                System.out.println("Digite algo: ");
+                String txt2 = scanner.nextLine();
+
+                if(txt1.equals(txt2)){
+                    System.out.printf("%s é igual ao %s", txt1, txt2);
+                }else{
+                    System.out.printf("%s não é igual ao %s", txt1, txt2);
+                }
+
+
+
                 // compareString(String stringUm, String stringDois)
+
                 break;
-            // 10) Crie um programa que tenha uma variável com ponto em String e converta seu valor para inteiro
+            
             case 10:
+                // 10) Crie um programa que tenha uma variável com ponto em String e converta seu valor para inteiro
+
+
+
+
                 // convertString(String valor);
+
                 break;
-            // 11) Crie um programa que receba o salário e diga o valor de imposto de renda conforme abaixo:
+         
+            case 11:
+                // 11) Crie um programa que receba o salário e diga o valor de imposto de renda conforme abaixo:
             // Base                     | Alíquota
             // ---------                | ------
             // Até 1.903,98             | Isento
@@ -77,11 +227,16 @@ public class ExercicioUm {
             // De 2.826,66 até 3.751,05 | 15%
             // De 3.751,06 até 4.664,68 | 22,5%
             // Acima de 4.664,68        | 27,5%
-            case 11:
+
+
+
                 // percentualImpostoSalario(double salario);
                 break;
-            // DESAFIO - Crie um programa que teste se um número é primo
+            
             case 12:
+             // DESAFIO - Crie um programa que teste se um número é primo
+
+
                 // testePrimo(int valor)
                 break;
             default:
@@ -91,15 +246,16 @@ public class ExercicioUm {
     }
 
     public static double media(double notaUm, double notaDois, double notaTres) {
-        return 0;
+    
+        return ( notaUm + notaDois + notaTres ) / 3;
     }
 
     public static double area(double ladoUm, double ladoDois) {
-        return 0;
+        return (ladoUm * ladoDois);
     }
 
     public static double volume(double largura, double altura, double profundidade) {
-        return 0;
+        return (largura * altura * profundidade);
     }
 
     public static boolean valorMaiorQueDobro(double base, double verificar) {
@@ -111,11 +267,11 @@ public class ExercicioUm {
     }
 
     public static double mediaViagem(double distancia, double tempo) {
-        return 0;
+        return (distancia / tempo);
     }
 
     public static double percentualImposto(double faturamento, double qtdImposto) {
-        return 0;
+        return (faturamento / qtdImposto);
     }
 
     public static boolean parOuImpar(int valor) {
