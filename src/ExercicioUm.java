@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class ExercicioUm {
 
@@ -50,6 +51,8 @@ public class ExercicioUm {
                 System.out.printf("Media das notas: %.2f", media);
 
                 break;
+
+                
             
             case 2:
             // 2) Crie um programa que calcule a área (`lado1 * lado2`)
@@ -97,17 +100,20 @@ public class ExercicioUm {
             case 4:
                 // 4) Crie um programa que avalie se um valor é maior do que o dobro de outro valor
 
+                Boolean valorMaiorQueBoolean;
+
                 System.out.println("Digite o primeiro Valor: ");
-                double valor1 = scanner.nextDouble();
+                double base = scanner.nextDouble();
 
                 System.out.println("Digite o segundo Valor: ");
-                double valor2 = scanner.nextDouble();
+                double verificar = scanner.nextDouble();
 
-                if(valor1 > valor2 * 2){
-                    System.out.printf("\n%.2f é maior que o dobro de %.2f!%n", valor1, valor2);
+
+                if(valorMaiorQueBoolean = valorMaiorQueDobro(base, verificar)){
+                    System.out.printf("\n%.2f é maior que o dobro de %.2f!%n", base, verificar);
                     
                 }else{
-                    System.out.printf("\n%.2f é menor que o dobro de %.2f!%n", valor1, valor2);
+                    System.out.printf("\n%.2f é menor que o dobro de %.2f!%n", base, verificar);
                     
                 }
 
@@ -172,10 +178,15 @@ public class ExercicioUm {
             case 8:
                 // 8) Crie um programa que teste se um valor é par ou ímpar
 
+                Boolean parOuImpar;
+
+
                 System.out.print("Digite um numero: ");
                 int valor = scanner.nextInt();
 
-                if(valor%2==0){
+
+
+                if(parOuImpar = parOuImpar(valor)){
                     System.out.printf("%d é Par",valor);
                 }else{
                     System.out.printf("%d é Impar",valor);
@@ -190,16 +201,18 @@ public class ExercicioUm {
             case 9:
                 // 9) Crie um programa que compare dois valores Strings
 
-                System.out.println("Digite algo: ");
-                String txt1 = scanner.nextLine();
+                Boolean compareString;
 
                 System.out.println("Digite algo: ");
-                String txt2 = scanner.nextLine();
+                String stringUm = scanner.nextLine();
 
-                if(txt1.equals(txt2)){
-                    System.out.printf("%s é igual ao %s", txt1, txt2);
+                System.out.println("Digite algo: ");
+                String stringDois = scanner.nextLine();
+
+                if(compareString = compareString(stringUm, stringDois)){
+                    System.out.printf("%s é igual ao %s", stringUm, stringDois);
                 }else{
-                    System.out.printf("%s não é igual ao %s", txt1, txt2);
+                    System.out.printf("%s não é igual ao %s", stringUm, stringDois);
                 }
 
 
@@ -210,7 +223,18 @@ public class ExercicioUm {
             
             case 10:
                 // 10) Crie um programa que tenha uma variável com ponto em String e converta seu valor para inteiro
+                Boolean convertString;
+                int numero;
+                String valor1 = "14.23";
 
+                System.out.printf("\nEssa variavel String tem o valor de %s", valor1);
+
+                System.out.print("\nInforme algum numero para ser convertido em Int: ");
+                valor1 = scanner.nextLine();
+
+                numero = convertString(valor1);
+                
+                System.out.printf("\nSeu valor em String foi convertido para Int\nValor: %d", numero);
 
 
 
@@ -230,11 +254,18 @@ public class ExercicioUm {
 
 
 
+
+
+
+
                 // percentualImpostoSalario(double salario);
                 break;
             
             case 12:
              // DESAFIO - Crie um programa que teste se um número é primo
+
+                
+                
 
 
                 // testePrimo(int valor)
@@ -246,7 +277,6 @@ public class ExercicioUm {
     }
 
     public static double media(double notaUm, double notaDois, double notaTres) {
-    
         return ( notaUm + notaDois + notaTres ) / 3;
     }
 
@@ -259,7 +289,7 @@ public class ExercicioUm {
     }
 
     public static boolean valorMaiorQueDobro(double base, double verificar) {
-        return false;
+        return (base > verificar * 2);
     }
 
     public static double[] bhaskara(int a, int b, int c) {
@@ -275,15 +305,15 @@ public class ExercicioUm {
     }
 
     public static boolean parOuImpar(int valor) {
-        return false;
+        return (valor%2==0);
     }
 
     public static boolean compareString(String stringUm, String stringDois) {
-        return false;
+        return (stringUm.equals(stringDois));
     }
 
     public static int convertString(String valor) {
-        return 0;
+        return (Integer.parseInt(valor));
     }
 
     public static double percentualImpostoSalario(double salario) {
